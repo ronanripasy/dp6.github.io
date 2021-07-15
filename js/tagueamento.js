@@ -14,7 +14,6 @@ menu_contato.addEventListener('click', function () {
         eventAction: 'entre_em_contato',
         eventLabel: 'link_externo'
     });
-    console.log('clicou: entre_em_contato ')
 });
 
 function downloadPdf() {
@@ -24,7 +23,6 @@ function downloadPdf() {
         eventAction: 'download_pdf',
         eventLabel: 'download_pdf'
     });
-    console.log('clicou: download_pdf')
 }
 
 $(".card-montadoras").click(function () {
@@ -44,7 +42,6 @@ function getValueInput(input) {
         eventAction: input.id,
         eventLabel: 'preencheu'
     });
-    console.log(input.id)
 }
 
 $(".contato").on("submit", function (event) {
