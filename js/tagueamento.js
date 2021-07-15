@@ -7,59 +7,52 @@
 
 var menu_contato = document.getElementById('entre_em_contato');
 
-menu_contato.addEventListener('click', function (event) {
-    // ga('send', {
-    //     hitType: 'event',
-    //     eventCategory: 'menu',
-    //     eventAction: 'entre_em_contato',
-    //     eventLabel: 'link_externo'
-    // });
-    alert('clicou: entre_em_contato ')
+menu_contato.addEventListener('click', function () {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'entre_em_contato',
+        eventLabel: 'link_externo'
+    });
+    console.log('clicou: entre_em_contato ')
 });
 
 function downloadPdf() {
-    // ga('send', {
-    //     hitType: 'event',
-    //     eventCategory: 'menu',
-    //     eventAction: 'download_pdf',
-    //     eventLabel: 'download_pdf'
-    // });
-    alert('clicou: download_pdf')
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'download_pdf',
+        eventLabel: 'download_pdf'
+    });
+    console.log('clicou: download_pdf')
 }
 
 $(".card-montadoras").click(function () {
     var data = $(this).data()
-    // ga('send', {
-    //     hitType: 'event',
-    //     eventCategory: 'analise',
-    //     eventAction: 'ver_mais',
-    //     eventLabel: data.name
-    // });
-    alert("Handler for .click() called.: " + data.id + ' - ' + data.name);
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'analise',
+        eventAction: 'ver_mais',
+        eventLabel: data.name
+    });
 });
 
 function getValueInput(input) {
-    // ga('send', {
-    //     hitType: 'event',
-    //     eventCategory: 'contato',
-    //     eventAction: input.id,
-    //     eventLabel: 'preencheu'
-    // });
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'contato',
+        eventAction: input.id,
+        eventLabel: 'preencheu'
+    });
     console.log(input.id)
 }
 
-
-var form = document.getElementById('signup-form');
-
-// Adds a listener for the "submit" event.
-form.addEventListener('submit', function (event) {
-
+$(".contato").on("submit", function (event) {
     event.preventDefault();
-
-    // ga('send', {
-    //     hitType: 'event',
-    //     eventCategory: 'contato',
-    //     eventAction: 'enviado',
-    //     eventLabel: 'enviado'
-    // });
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'contato',
+        eventAction: 'enviado',
+        eventLabel: 'enviado'
+    });
 });
